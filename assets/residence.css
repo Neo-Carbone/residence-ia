@@ -429,7 +429,9 @@ body.nav-open{overflow:hidden;}
 
 /* ---------- stats band ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border:0;border-radius:0;overflow:visible;background:transparent;box-shadow:none;}
-.stat-cell{padding:28px;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);box-shadow:var(--shadow-card-soft);display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s;}
+.stat-cell{position:relative;overflow:hidden;padding:28px;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);box-shadow:var(--shadow-card-soft);display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s;}
+.stat-cell::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--blue-200);filter:blur(44px);opacity:.35;pointer-events:none;}
+.stat-cell>*{position:relative;z-index:1;}
 .stat-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow-card);}
 .stat-cell .num{
   font-family:var(--ff-grotesk);font-weight:800;font-size:clamp(52px,6.2vw,76px);
@@ -463,7 +465,7 @@ body.nav-open{overflow:hidden;}
 #resultats .sec-head .h-lg{font-size:clamp(40px,5.4vw,80px);line-height:1.04;}
 #resultats .sec-head{padding-bottom:clamp(28px,3vw,40px);}
 .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.prob{position:relative;background:#fff;border:1px solid var(--hair);border-radius:var(--r-2xl);padding:32px;overflow:hidden;box-shadow:var(--shadow-card-soft);transition:transform .2s,box-shadow .2s;}
+.prob{position:relative;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);padding:32px;overflow:hidden;box-shadow:var(--shadow-card-soft);transition:transform .2s,box-shadow .2s;}
 .prob::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:var(--blue-200);filter:blur(48px);opacity:.4;pointer-events:none;z-index:0;}
 .prob:hover{transform:translateY(-2px);box-shadow:var(--shadow-card);}
 .prob>*{position:relative;z-index:1;}
@@ -684,7 +686,7 @@ body.nav-open{overflow:hidden;}
 .cmp .v-badge .v{width:18px;height:18px;display:block;color:var(--blue-600);}
 
 /* ---------- team ---------- */
-.team{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:20px;justify-content:center;}
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,420px));gap:20px;justify-content:center;}
 .member{position:relative;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);padding:28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;box-shadow:var(--shadow-card-soft);overflow:hidden;transition:transform .2s,box-shadow .2s;}
 .member::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--blue-200);filter:blur(40px);opacity:.35;pointer-events:none;}
 .member:hover{transform:translateY(-2px);box-shadow:var(--shadow-card);}
@@ -699,7 +701,9 @@ body.nav-open{overflow:hidden;}
 
 /* ---------- cohorts / dates ---------- */
 .dates{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.cohort{background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);padding:32px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-card-soft);transition:transform .2s,box-shadow .2s;}
+.cohort{position:relative;overflow:hidden;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);padding:32px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-card-soft);transition:transform .2s,box-shadow .2s;}
+.cohort::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--blue-200);filter:blur(44px);opacity:.35;pointer-events:none;}
+.cohort>*{position:relative;z-index:1;}
 .cohort:hover{transform:translateY(-2px);box-shadow:var(--shadow-card);}
 .cohort .lab{font-family:var(--ff-mono);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue-600);}
 .cohort .city{font-family:var(--ff-grotesk);font-weight:800;font-size:28px;letter-spacing:-0.025em;color:var(--ink);}
