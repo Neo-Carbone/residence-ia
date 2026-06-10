@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Gabarit de l'image Open Graph (1200×630). Rendu puis capturé en PNG → assets/og-image.png -->
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;overflow:hidden;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#eff6ff 0%,#f0f4ff 28%,#fafbff 52%,#f5f3ff 78%,#ffffff 100%);
+    position:relative;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .glow{
+    position:absolute;inset:0;
+    background:radial-gradient(ellipse 80% 62% at 50% 0%, rgba(147,197,253,.5) 0%, rgba(199,210,254,.22) 42%, transparent 70%);
+    pointer-events:none;
+  }
+  .ring{position:absolute;border:1.5px solid rgba(96,165,250,.14);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);}
+  .r1{width:760px;height:760px;}
+  .r2{width:1060px;height:1060px;}
+  .r3{width:1380px;height:1380px;}
+  .tag{
+    position:relative;
+    font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:500;
+    letter-spacing:.18em;text-transform:uppercase;color:#5a6577;
+    background:rgba(255,255,255,.94);border:1px solid rgba(15,23,42,.1);
+    padding:12px 26px;border-radius:999px;margin-bottom:44px;
+  }
+  .brand{
+    position:relative;
+    display:flex;align-items:center;gap:20px;
+    font-size:118px;font-weight:900;letter-spacing:-.045em;line-height:1;color:#0b0e13;
+  }
+  .brand .ia{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:.05em .2em .07em;border-radius:22px;
+    font-weight:800;color:#fff;
+    background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 45%,#2563eb 100%);
+  }
+  .sub{
+    position:relative;
+    margin-top:34px;font-size:27px;font-weight:500;color:#3d4656;letter-spacing:-.01em;
+  }
+  .sub b{color:#0b0e13;font-weight:700;}
+  .partners{
+    position:absolute;left:0;right:0;bottom:46px;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+  }
+  .partners .lbl{
+    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;
+    letter-spacing:.18em;text-transform:uppercase;color:#8a93a3;
+  }
+  .logos{display:flex;align-items:center;gap:26px;}
+  .logos .neo{height:40px;width:auto;}
+  .logos .x{color:#8a93a3;font-size:20px;}
+  .logos .drouin{height:46px;width:auto;}
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+  <div class="tag">Parcours immersif · Cohortes 2026</div>
+  <div class="brand">Résidence <span class="ia">IA</span></div>
+  <div class="sub"><b>4 phases · 4 jours · 6 semaines</b> — un vrai outil IA en production, pas un certificat.</div>
+  <div class="partners">
+    <span class="lbl">Une initiative de</span>
+    <div class="logos">
+      <img class="neo" src="logo-horizontal-color-dark.png" alt="">
+      <span class="x">×</span>
+      <img class="drouin" src="drouin-rh-logo-transparent.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
