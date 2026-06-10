@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- Gabarit de l'image Open Graph (1200×630). Rendu puis capturé en PNG → assets/og-image.png -->
+<!-- Gabarit de l'image Open Graph (1200×630). Rendu puis capturé en PNG → assets/og-image.png.
+     Conçu pour rester lisible à ~500px de large (iMessage, LinkedIn, etc.) : gros éléments, marges réduites. -->
 <html lang="fr-CA">
 <head>
 <meta charset="UTF-8">
@@ -14,60 +15,63 @@
     background:linear-gradient(135deg,#eff6ff 0%,#f0f4ff 28%,#fafbff 52%,#f5f3ff 78%,#ffffff 100%);
     position:relative;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;
+    text-align:center;padding-bottom:88px;
   }
   .glow{
     position:absolute;inset:0;
     background:radial-gradient(ellipse 80% 62% at 50% 0%, rgba(147,197,253,.5) 0%, rgba(199,210,254,.22) 42%, transparent 70%);
     pointer-events:none;
   }
-  .ring{position:absolute;border:1.5px solid rgba(96,165,250,.14);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);}
-  .r1{width:760px;height:760px;}
-  .r2{width:1060px;height:1060px;}
-  .r3{width:1380px;height:1380px;}
+  .ring{position:absolute;border:2px solid rgba(96,165,250,.13);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);}
+  .r1{width:860px;height:860px;}
+  .r2{width:1240px;height:1240px;}
   .tag{
     position:relative;
-    font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:500;
-    letter-spacing:.18em;text-transform:uppercase;color:#5a6577;
-    background:rgba(255,255,255,.94);border:1px solid rgba(15,23,42,.1);
-    padding:12px 26px;border-radius:999px;margin-bottom:44px;
+    font-family:'JetBrains Mono',monospace;font-size:23px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:#485263;
+    background:rgba(255,255,255,.94);border:1.5px solid rgba(15,23,42,.12);
+    padding:16px 34px;border-radius:999px;margin-bottom:42px;
   }
   .brand{
     position:relative;
-    display:flex;align-items:center;gap:20px;
-    font-size:118px;font-weight:900;letter-spacing:-.045em;line-height:1;color:#0b0e13;
+    display:flex;align-items:center;gap:26px;
+    font-size:172px;font-weight:900;letter-spacing:-.045em;line-height:1;color:#0b0e13;
   }
   .brand .ia{
     display:inline-flex;align-items:center;justify-content:center;
-    padding:.05em .2em .07em;border-radius:22px;
+    padding:.05em .2em .07em;border-radius:30px;
     font-weight:800;color:#fff;
     background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 45%,#2563eb 100%);
   }
   .sub{
     position:relative;
-    margin-top:34px;font-size:27px;font-weight:500;color:#3d4656;letter-spacing:-.01em;
+    margin-top:38px;font-size:40px;font-weight:800;color:#0b0e13;letter-spacing:-.015em;
   }
-  .sub b{color:#0b0e13;font-weight:700;}
+  .sub2{
+    position:relative;
+    margin-top:14px;font-size:33px;font-weight:500;color:#3d4656;letter-spacing:-.01em;
+  }
   .partners{
-    position:absolute;left:0;right:0;bottom:46px;
-    display:flex;flex-direction:column;align-items:center;gap:16px;
+    position:absolute;left:0;right:0;bottom:38px;
+    display:flex;align-items:center;justify-content:center;gap:30px;
   }
   .partners .lbl{
-    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;
-    letter-spacing:.18em;text-transform:uppercase;color:#8a93a3;
+    font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:#717b8c;
   }
-  .logos{display:flex;align-items:center;gap:26px;}
-  .logos .neo{height:40px;width:auto;}
-  .logos .x{color:#8a93a3;font-size:20px;}
-  .logos .drouin{height:46px;width:auto;}
+  .logos{display:flex;align-items:center;gap:28px;}
+  .logos .neo{height:56px;width:auto;}
+  .logos .x{color:#717b8c;font-size:27px;}
+  .logos .drouin{height:64px;width:auto;}
 </style>
 </head>
 <body>
   <div class="glow"></div>
-  <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+  <span class="ring r1"></span><span class="ring r2"></span>
   <div class="tag">Parcours immersif · Cohortes 2026</div>
   <div class="brand">Résidence <span class="ia">IA</span></div>
-  <div class="sub"><b>4 phases · 4 jours · 6 semaines</b> — un vrai outil IA en production, pas un certificat.</div>
+  <div class="sub">4 phases · 4 jours · 6 semaines</div>
+  <div class="sub2">Un vrai outil IA en production — pas un certificat.</div>
   <div class="partners">
     <span class="lbl">Une initiative de</span>
     <div class="logos">
