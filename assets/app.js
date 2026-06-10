@@ -230,6 +230,31 @@
 
   document.querySelectorAll('#bookForm .select-wrap select').forEach(enhanceSelect);
 
+  /* ---------- Price estimate in booking form ---------- */
+  var countSelect = document.getElementById('f-count');
+  var estimate = document.getElementById('priceEstimate');
+  if(countSelect && estimate){
+    var fmt = function(n){ return n.toLocaleString('fr-CA').replace(/\u202f/g, '\u00a0') + '\u00a0$'; };
+    countSelect.addEventListener('change', function(){
+      var v = countSelect.value;
+      var lbl = document.getElementById('priceEstimateLbl');
+      var val = document.getElementById('priceEstimateVal');
+      if(!v){ estimate.hidden = true; return; }
+      if(v === '1'){
+        lbl.textContent = '1 participant × 4\u00a0250\u00a0$';
+        val.textContent = fmt(4250);
+      } else if(v === '5+'){
+        lbl.textContent = '5 participants et plus × 3\u00a0995\u00a0$';
+        val.textContent = 'd\u00e8s ' + fmt(5 * 3995);
+      } else {
+        var n = parseInt(v, 10);
+        lbl.textContent = v + ' participants × 3\u00a0995\u00a0$';
+        val.textContent = fmt(n * 3995);
+      }
+      estimate.hidden = false;
+    });
+  }
+
   /* ---------- Cohort preselect from CTA cards ---------- */
   document.querySelectorAll('a[data-cohort]').forEach(function(a){
     a.addEventListener('click', function(){
@@ -262,6 +287,7 @@
       courriel: (form.querySelector('#f-email').value||'').trim(),
       organisation: (form.querySelector('#f-org').value||'').trim(),
       cohorte: form.querySelector('#f-cohort').value,
+      participants: form.querySelector('#f-count').value,
       consentement: 'true',
       soumisLe: new Date().toISOString(),
       source: 'site-residence-ia'
