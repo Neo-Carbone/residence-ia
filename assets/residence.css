@@ -927,22 +927,59 @@ body.nav-open{overflow:hidden;}
   .hero-counts .val{font-size:clamp(24px,7vw,32px);}
   .stats,.prob-grid,.team,.dual,.dates,.pricing{grid-template-columns:1fr;}
   .ba-compare-head{display:none;}
-  .ba-compare-body{gap:40px;}
+  .ba-compare-body{gap:38px;}
   .ba-row{
     grid-template-columns:1fr;
     grid-template-areas:"before-head" "before" "arrow" "after-head" "after";
-    gap:10px;
+    gap:0;
   }
-  .ba-step-head-row{display:block;}
-  .ba-step-head-before{grid-area:before-head;}
-  .ba-step-head-after{grid-area:after-head;color:var(--ink-2);}
+  /* Avant/Après mobile : chronologie verticale — pastilles sur les cartes,
+     ligne de connexion et flèche entre les deux états. */
+  .ba-step-head-row{
+    display:inline-flex;align-items:center;width:max-content;justify-self:center;
+    font-size:10.5px;letter-spacing:0.14em;
+    padding:6px 16px;border-radius:999px;
+    margin-bottom:-13px;position:relative;z-index:3;
+  }
+  .ba-step-head-before{
+    grid-area:before-head;
+    background:#fff;border:1px solid var(--border-strong);color:var(--muted);
+    box-shadow:var(--shadow-1);
+  }
+  .ba-step-head-after{
+    grid-area:after-head;
+    background:var(--accent-gradient);border:0;color:#fff;
+    box-shadow:0 6px 16px -6px rgba(30,58,138,.4);
+  }
+  .ba-block{padding:27px 18px 18px;}
   .ba-block-before{grid-area:before;}
   .ba-block-after{grid-area:after;}
-  .ba-row-arrow{display:flex;grid-area:arrow;margin:4px auto;}
+  .ba-row-arrow{
+    display:flex;grid-area:arrow;position:relative;
+    width:36px;height:60px;margin:0 auto;
+    border-radius:0;background:transparent;border:0;box-shadow:none;
+  }
+  .ba-row-arrow::before{
+    content:'';position:absolute;left:50%;top:-12px;bottom:-16px;width:2px;
+    transform:translateX(-50%);background:var(--blue-200);
+  }
+  .ba-row-arrow span{
+    position:relative;z-index:1;margin:auto;
+    display:flex;align-items:center;justify-content:center;
+    width:36px;height:36px;border-radius:50%;
+    background:#fff;border:1px solid var(--blue-200);color:var(--blue-700);
+    font-size:18px;box-shadow:var(--shadow-1);
+  }
   .ba-arrow{display:none;}
   .stats{gap:14px;}
   .diag{grid-template-columns:1fr;gap:16px;}
   .diag .yn{justify-content:flex-start;}
+  /* La carte « réserver » flotte au bas de l'écran dès qu'un « oui » est donné,
+     puis reprend sa place dans le flux quand on la dépasse. */
+  .diag-result.live{
+    position:sticky;bottom:14px;z-index:40;
+    box-shadow:0 18px 44px -12px rgba(30,58,138,.5);
+  }
   .cmp{
     display:grid;grid-template-columns:1fr;
     grid-template-rows:repeat(7,auto) 20px repeat(7,auto);

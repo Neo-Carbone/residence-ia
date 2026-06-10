@@ -245,7 +245,7 @@
         val.textContent = fmt(4250);
       } else if(v === '5+'){
         lbl.textContent = '5 participants et plus × 3\u00a0995\u00a0$';
-        val.textContent = 'd\u00e8s ' + fmt(5 * 3995);
+        val.textContent = '\u00e0 partir de ' + fmt(5 * 3995);
       } else {
         var n = parseInt(v, 10);
         lbl.textContent = v + ' participants × 3\u00a0995\u00a0$';
