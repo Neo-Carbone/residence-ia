@@ -766,6 +766,9 @@ body.nav-open{overflow:hidden;}
   content:'✓';flex:0 0 auto;
   font-family:var(--ff-grotesk);font-size:14px;font-weight:800;color:var(--blue-600);
 }
+.book-card .form-error{
+  margin:14px 0 0;font-size:13.5px;font-weight:600;line-height:1.5;color:#B42318;
+}
 .book-sent{text-align:center;padding:36px 10px;}
 .book-sent .mk{width:54px;height:54px;margin:0 auto 18px;}
 .book-sent h3{font-family:var(--ff-grotesk);font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--ink-strong);margin:0 0 10px;}

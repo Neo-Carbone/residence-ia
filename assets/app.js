@@ -241,15 +241,60 @@
   });
 
   /* ---------- Booking form ---------- */
+  var BOOKING_WEBHOOK = 'https://hooks.airtable.com/workflows/v1/genericWebhook/appJGOHZRV000DHKc/wflw03c0O3NyStrkc/wtrx2H4OutHq3xVtZ';
   var form = document.getElementById('bookForm');
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var card = form.parentElement;
-    var name = (form.querySelector('#f-name').value||'').split(' ')[0];
-    card.innerHTML =
-      '<div class="book-sent"><img class="mk" src="assets/mark-color.png" alt="">'+
-      '<h3>C\u2019est noté'+(name?', '+name:'')+'\u00a0!</h3>'+
-      '<p>Nous revenons vers vous sous 24 h pour confirmer votre place et répondre à vos questions.</p></div>';
+
+    // Consent is mandatory: no submission without the box checked.
+    var consent = form.querySelector('.consent input[type="checkbox"]');
+    if(!consent || !consent.checked){
+      if(consent && consent.reportValidity) consent.reportValidity();
+      return;
+    }
+
+    var btn = form.querySelector('button[type="submit"]');
+    var prevError = form.querySelector('.form-error');
+    if(prevError) prevError.remove();
+
+    var data = {
+      nom: (form.querySelector('#f-name').value||'').trim(),
+      courriel: (form.querySelector('#f-email').value||'').trim(),
+      organisation: (form.querySelector('#f-org').value||'').trim(),
+      cohorte: form.querySelector('#f-cohort').value,
+      consentement: 'true',
+      soumisLe: new Date().toISOString(),
+      source: 'site-residence-ia'
+    };
+
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours\u2026';
+
+    // Airtable webhooks don't send CORS headers: use a "simple request"
+    // (form-urlencoded, no preflight) in no-cors mode. The response is
+    // opaque, so resolution = the request was delivered.
+    var body = new URLSearchParams(data);
+    fetch(BOOKING_WEBHOOK, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: body.toString()
+    }).then(function(){
+      var card = form.parentElement;
+      var name = data.nom.split(' ')[0];
+      card.innerHTML =
+        '<div class="book-sent"><img class="mk" src="assets/mark-color.png" alt="">'+
+        '<h3>C\u2019est noté'+(name?', '+name:'')+'\u00a0!</h3>'+
+        '<p>Nous revenons vers vous rapidement pour confirmer votre place et répondre à vos questions.</p></div>';
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Réserver ma place';
+      var p = document.createElement('p');
+      p.className = 'form-error';
+      p.setAttribute('role', 'alert');
+      p.textContent = 'Une erreur est survenue lors de l\u2019envoi. Veuillez réessayer ou nous écrire à info@neocarbone.ai.';
+      form.appendChild(p);
+    });
   });
 
   /* ---------- Before/After cards: magnetic tilt + sheen ---------- */
