@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résidence IA · Parcours immersif de transformation IA</title>
+<link rel="stylesheet" href="assets/residence.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Résidence IA — accueil">
+      <span class="wm"><b>Résidence&nbsp;IA</b><span>par Neo Carbone × Drouin RH</span></span>
+    </a>
+    <nav class="nav-mid">
+      <a href="#probleme">Le constat</a>
+      <a href="#parcours">Le parcours</a>
+      <a href="#methode">La méthode</a>
+      <a href="#equipe">L'équipe</a>
+      <a href="#dates">Dates</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary nav-cta" href="#inscription"><span class="nav-cta-full">Réserver ma place</span><span class="nav-cta-short">Réserver</span> <span class="ar">→</span></a>
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="navDrawer" aria-label="Ouvrir le menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-backdrop" aria-hidden="true"></div>
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <nav class="nav-drawer-links" aria-label="Navigation principale">
+    <a href="#probleme">Le constat</a>
+    <a href="#parcours">Le parcours</a>
+    <a href="#methode">La méthode</a>
+    <a href="#equipe">L'équipe</a>
+    <a href="#dates">Dates</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-primary btn-lg nav-drawer-cta" href="#inscription">Réserver ma place <span class="ar">→</span></a>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="glow a g1"></div>
+  <div class="hero-orbit" aria-hidden="true">
+    <span class="ring r1"></span>
+    <span class="ring r2"></span>
+    <span class="ring r3"></span>
+    <span class="ring r4"></span>
+    <span class="ring r5"></span>
+    <span class="ring r6"></span>
+    <span class="ring r7"></span>
+    <span class="ring r8"></span>
+    <span class="ring r9"></span>
+    <span class="ring r10"></span>
+  </div>
+  <div class="wrap hero-in hero-enter">
+    <a class="tag" href="#dates">Cohortes 2026 · Montréal &amp; Lévis<span class="ar">→</span></a>
+    <div class="hero-brand display" aria-hidden="true"><span>Résidence</span><span class="hero-brand-ia">IA</span></div>
+    <h1 class="hero-headline">
+      <span class="hero-line setup">L'IA ne transforme pas les organisations à elle seule.</span>
+      <span class="hero-line punch display">Les <span class="spec">humains</span> qui décident de <span class="spec">changer</span>, oui.</span>
+    </h1>
+    <p class="lede">Un parcours immersif de <strong>4 jours sur 6 semaines</strong> où vos équipes repartent avec un <strong>vrai outil IA fonctionnel</strong> — pas un certificat.</p>
+    <div class="hero-foot" aria-label="Structure du parcours">
+      <ul class="hero-counts">
+        <li><a href="#methode"><span class="val">4</span><span class="lbl">Phases</span></a></li>
+        <li><a href="#methode"><span class="val">4</span><span class="lbl">Jours</span></a></li>
+        <li><a href="#methode"><span class="val">6</span><span class="lbl">Semaines</span></a></li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="#inscription">Réserver ma place <span class="ar">→</span></a>
+      <a class="btn btn-secondary btn-lg" href="#parcours">Voir le parcours <span class="ar">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="sec tight stats-band">
+  <div class="wrap reveal">
+    <div class="kicker">01 · Le réveil</div>
+    <div class="stats">
+      <div class="stat-cell">
+        <div class="num"><span data-count="41">0</span><span class="sm">%</span></div>
+        <p>de la génération Gen-Z avoue avoir tenté de saboter les projets IA de leur entreprise.</p>
+      </div>
+      <div class="stat-cell">
+        <div class="num"><span data-count="95">0</span><span class="sm">%</span></div>
+        <p>des pilotes IA échouent à cause de l'écart d'apprentissage des outils et des organisations.</p>
+      </div>
+      <div class="stat-cell">
+        <div class="num"><span class="sm">+</span><span data-count="29">0</span><span class="sm">%</span></div>
+        <p>de gain en productivité pour les PME canadiennes qui utilisent l'IA vs celles qui ne l'utilisent pas.</p>
+      </div>
+      <div class="stat-cell">
+        <div class="num"><span data-count="2.8" data-decimal="1">0</span><span class="sm">x</span></div>
+        <p>Les hauts-performants IA sont 2.8x plus susceptibles de redessiner leurs workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THESIS 1 ============ -->
+<section class="sec">
+  <div class="wrap thesis reveal">
+    <p>Le plus grand danger : croire que l'IA remplacera<br>le besoin de <span class="spec">développer les humains</span>.</p>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec alt" id="probleme">
+  <div class="wrap">
+    <div class="sec-head mt-head reveal">
+      <div class="kicker">02 · Le constat</div>
+      <h2 class="display h-lg">Les outils IA sont partout.<br>La capacité à les <span class="spec">intégrer</span>, presque nulle part.</h2>
+    </div>
+    <div class="prob-grid">
+      <div class="prob reveal">
+        <div class="n">01</div>
+        <h3>Les PME québécoises veulent intégrer l'IA, mais manquent de ressources internes.</h3>
+        <p>Sans équipe IA dédiée, sans budget pour des consultants à temps plein, l'IA reste une promesse théorique.</p>
+      </div>
+      <div class="prob reveal">
+        <div class="n">02</div>
+        <h3>Les formations traditionnelles créent peu de transformation durable.</h3>
+        <p>Trois jours de théorie, puis retour au quotidien sans qu'aucun outil ne soit construit ni qu'aucun processus ne change.</p>
+      </div>
+      <div class="prob reveal">
+        <div class="n">03</div>
+        <h3>Les employés terrain comprennent les irritants mieux que les consultants externes.</h3>
+        <p>Quand on leur donne les bons outils et le bon cadre, ils deviennent les meilleurs architectes de la transformation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELF-DIAGNOSIS ============ -->
+<section class="sec" id="diagnostic">
+  <div class="wrap">
+    <div class="sec-head center mt-head reveal">
+      <div class="kicker center" style="justify-content:center">03 · Auto-diagnostic</div>
+      <h2 class="display h-lg">Et si une de ces questions<br>vous <span class="spec">parlait</span>?</h2>
+      <p class="lede">Cinq inquiétudes qui reviennent dans la tête des dirigeants qu'on accompagne. Une seule « oui » suffit.</p>
+    </div>
+    <div class="diag-list" id="diagList">
+      <div class="diag reveal">
+        <div class="n">01</div>
+        <div class="q">« Je sais qu'il faut bouger sur l'IA. Mais par où je commence sans foncer dans un mur? »</div>
+        <div class="yn"><button class="yes" aria-pressed="false">Oui, c'est moi</button></div>
+      </div>
+      <div class="diag reveal">
+        <div class="n">02</div>
+        <div class="q">« Est-ce que mes données clients vont se retrouver dans ChatGPT? Comment faire confiance à un outil qui invente des affaires? »</div>
+        <div class="yn"><button class="yes" aria-pressed="false">Oui, c'est moi</button></div>
+      </div>
+      <div class="diag reveal">
+        <div class="n">03</div>
+        <div class="q">« Il sort un nouvel outil IA chaque semaine. Comment j'avance dans le bon chemin sans me tromper? »</div>
+        <div class="yn"><button class="yes" aria-pressed="false">Oui, c'est moi</button></div>
+      </div>
+      <div class="diag reveal">
+        <div class="n">04</div>
+        <div class="q">« Certains employés ont peur d'être remplacés. D'autres pensent que l'IA va tout faire à leur place. Comment je gère ça? »</div>
+        <div class="yn"><button class="yes" aria-pressed="false">Oui, c'est moi</button></div>
+      </div>
+      <div class="diag reveal">
+        <div class="n">05</div>
+        <div class="q">« J'ai été échaudé par des consultants qui livrent des PowerPoints et repartent. Comment je trouve un partenaire qui livre du concret? »</div>
+        <div class="yn"><button class="yes" aria-pressed="false">Oui, c'est moi</button></div>
+      </div>
+    </div>
+    <div class="diag-result reveal" id="diagResult">
+      <p id="diagMsg">Si 1 seule de ces questions est la vôtre, la Résidence IA est <span class="it">conçue pour vous</span>.</p>
+      <a class="btn btn-primary" href="#inscription">Réserver votre place <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DUAL TRANSFORMATION ============ -->
+<section class="sec alt" id="parcours">
+  <div class="wrap">
+    <div class="sec-head mt-head reveal">
+      <div class="kicker">04 · Un parcours, deux transformations</div>
+      <h2 class="display h-lg h-stack">
+        <span class="h-stack-line">Chaque participant en sort&nbsp;<span class="spec">grandi.</span></span>
+        <span class="h-stack-line">Chaque organisation en sort&nbsp;<span class="spec">plus&nbsp;productive.</span></span>
+      </h2>
+      <p class="lede">Ce que vos équipes développent. Ce que votre organisation y gagne.</p>
+    </div>
+    <div class="dual">
+      <div class="dual-col reveal">
+        <div class="lab">Les participants</div>
+        <h3>Repartent <span class="spec">outillés</span> et grandis.</h3>
+        <ul>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Développent une vraie compétence IA</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Apprennent à lire leur travail différemment</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Identifient les irritants et pertes de temps</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Cartographient les opportunités à fort impact</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Conçoivent un outil IA adapté à leur réalité</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Testent et ajustent leur solution</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Présentent leur projet à la direction</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Repartent avec un plan concret de déploiement</li>
+        </ul>
+      </div>
+      <div class="dual-col reveal">
+        <div class="lab">Les organisations</div>
+        <h3>Intègrent l'IA <span class="spec">sans chaos</span>.</h3>
+        <ul>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Mobilisent les équipes plutôt que créer de la résistance</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Réduisent les irritants opérationnels</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Gagnent en efficacité</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Font émerger l'innovation du terrain</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Bâtissent des compétences IA durables à l'interne</li>
+          <li><svg class="ck" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#0B0E13" stroke-width="1.4"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#0B0E13" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Transforment leurs employés en partenaires du changement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="sec" id="resultats">
+  <div class="wrap">
+    <div class="sec-head center mt-head reveal">
+      <div class="kicker center" style="justify-content:center">05 · La vraie plus-value</div>
+      <h2 class="display h-lg">Pas pour <span class="spec">remplacer</span> vos employés.<br>Pour les <span class="spec">déployer</span> là où ils créent le plus de valeur.</h2>
+    </div>
+    <div class="ba-compare reveal">
+      <div class="ba-compare-head">
+        <span class="ba-step-head">Avant</span>
+        <span class="ba-step-head">Après</span>
+      </div>
+      <div class="ba-compare-body">
+        <div class="ba-row">
+          <span class="ba-step-head ba-step-head-row ba-step-head-before">Avant</span>
+          <div class="ba-block ba-block-before">
+            <div class="lab">Support client</div>
+            <p>1 personne traite 40 tickets par jour.</p>
+          </div>
+          <div class="ba-row-arrow" aria-hidden="true"><span>↓</span></div>
+          <span class="ba-step-head ba-step-head-row ba-step-head-after">Après</span>
+          <div class="ba-block ba-block-after">
+            <p>Votre agente support a bâti un assistant qui prépare les réponses aux tickets récurrents.</p>
+            <div class="gain">Double de volume</div>
+            <div class="note">→ Elle garde les cas complexes pour elle.</div>
+          </div>
+        </div>
+        <div class="ba-row">
+          <span class="ba-step-head ba-step-head-row ba-step-head-before">Avant</span>
+          <div class="ba-block ba-block-before">
+            <div class="lab">Rapport de production</div>
+            <p>4 heures chaque vendredi à compiler le rapport hebdo.</p>
+          </div>
+          <div class="ba-row-arrow" aria-hidden="true"><span>↓</span></div>
+          <span class="ba-step-head ba-step-head-row ba-step-head-after">Après</span>
+          <div class="ba-block ba-block-after">
+            <p>Votre superviseur a monté un outil qui compile son rapport hebdo à partir de vos systèmes existants.</p>
+            <div class="gain">4 h récupérées chaque vendredi</div>
+            <div class="note">→ Ses heures servent maintenant à analyser, pas à copier-coller.</div>
+          </div>
+        </div>
+        <div class="ba-row">
+          <span class="ba-step-head ba-step-head-row ba-step-head-before">Avant</span>
+          <div class="ba-block ba-block-before">
+            <div class="lab">Proposition commerciale</div>
+            <p>2 à 4 heures par proposition.</p>
+          </div>
+          <div class="ba-row-arrow" aria-hidden="true"><span>↓</span></div>
+          <span class="ba-step-head ba-step-head-row ba-step-head-after">Après</span>
+          <div class="ba-block ba-block-after">
+            <p>Votre chargée de comptes a créé un gabarit IA nourri de vos anciennes soumissions.</p>
+            <div class="gain">Fini la page blanche</div>
+            <div class="note">→ Elle part d'un brouillon solide au lieu d'une page blanche.</div>
+          </div>
+        </div>
+        <div class="ba-row">
+          <span class="ba-step-head ba-step-head-row ba-step-head-before">Avant</span>
+          <div class="ba-block ba-block-before">
+            <div class="lab">Comité de direction</div>
+            <p>30 à 45 minutes en début de comité de direction à comparer les chiffres de chacun.</p>
+          </div>
+          <div class="ba-row-arrow" aria-hidden="true"><span>↓</span></div>
+          <span class="ba-step-head ba-step-head-row ba-step-head-after">Après</span>
+          <div class="ba-block ba-block-after">
+            <p>Votre contrôleur a automatisé le briefing chiffré du lundi matin.</p>
+            <div class="gain">Décisions dès le départ</div>
+            <div class="note">→ Le comité commence par les décisions, pas par la réconciliation des chiffres.</div>
+          </div>
+        </div>
+        <div class="ba-arrow" aria-hidden="true"><span>→</span></div>
+      </div>
+    </div>
+    <p class="lede" style="text-align:center;max-width:720px;margin:40px auto 0">Les outils sont construits <span class="it">AVEC</span> les employés, pas imposés <span class="it">AUX</span> employés.</p>
+  </div>
+</section>
+
+<!-- ============ PHASE TIMELINE ============ -->
+<section class="sec alt" id="methode">
+  <div class="wrap">
+    <div class="sec-head center mt-head reveal">
+      <div class="kicker center" style="justify-content:center">06 · La méthode</div>
+      <h2 class="display h-lg"><span class="spec">4</span> phases. <span class="spec">4</span> jours.<br>Une transformation sur <span class="spec">6 semaines</span>.</h2>
+    </div>
+    <div class="reveal">
+      <div class="ph-week"><span>Semaine 0</span><span>Semaine 6</span></div>
+      <div class="ph-prog" id="phProg">
+        <div class="seg fill"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+      </div>
+      <div class="ph-tabs" id="phTabs" role="tablist">
+        <button class="ph-tab" role="tab" aria-selected="true" data-i="0"><div class="n">01</div><div class="t">Comprendre</div><div class="d">1 jour · Semaine 0</div></button>
+        <button class="ph-tab" role="tab" aria-selected="false" data-i="1"><div class="n">02</div><div class="t">Cartographier</div><div class="d">1 jour · Semaine 2</div></button>
+        <button class="ph-tab" role="tab" aria-selected="false" data-i="2"><div class="n">03</div><div class="t">Construire</div><div class="d">1 jour · Semaine 4</div></button>
+        <button class="ph-tab" role="tab" aria-selected="false" data-i="3"><div class="n">04</div><div class="t">Déployer</div><div class="d">1 jour · Semaine 6</div></button>
+      </div>
+      <div class="ph-panel" id="phPanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON TABLE ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center mt-head reveal">
+      <div class="kicker center" style="justify-content:center">07 · Pourquoi c'est différent</div>
+      <h2 class="display h-lg">Une approche <span class="spec">unique</span> au Québec.</h2>
+    </div>
+    <div class="cmp reveal">
+      <div class="cmp-row head">
+        <div class="cell feat">Ce qui compte vraiment</div>
+        <div class="cell other">Formations classiques</div>
+        <div class="cell ours">Résidence IA</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">L'humain et la psychologie du changement</div>
+        <div class="cell other" data-feat="L'humain et la psychologie du changement"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Jamais central</span></div>
+        <div class="cell ours" data-feat="L'humain et la psychologie du changement"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Phase entière dédiée</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">Outils IA construits sur vos vrais cas</div>
+        <div class="cell other" data-feat="Outils IA construits sur vos vrais cas"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Démos génériques</span></div>
+        <div class="cell ours" data-feat="Outils IA construits sur vos vrais cas"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Vos flux, vos tickets, vos rapports</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">Restructuration RH et gouvernance IA</div>
+        <div class="cell other" data-feat="Restructuration RH et gouvernance IA"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Hors-sujet</span></div>
+        <div class="cell ours" data-feat="Restructuration RH et gouvernance IA"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Politique IA et rôles</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">Plan 90 jours engagé devant pairs</div>
+        <div class="cell other" data-feat="Plan 90 jours engagé devant pairs"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Une liste de prompts</span></div>
+        <div class="cell ours" data-feat="Plan 90 jours engagé devant pairs"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Plan complet et engagement</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">RH + technologie</div>
+        <div class="cell other" data-feat="RH + technologie"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Tech seulement</span></div>
+        <div class="cell ours" data-feat="RH + technologie"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Une première au Québec</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cell feat">Suivi post-parcours</div>
+        <div class="cell other" data-feat="Suivi post-parcours"><svg class="x" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cmp-val">Aucun suivi</span></div>
+        <div class="cell ours" data-feat="Suivi post-parcours"><span class="v-badge" aria-hidden="true"><svg class="v" viewBox="0 0 20 20" fill="none"><path d="M5.5 10.3l2.8 2.8L14.8 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cmp-val">Sessions et rencontres</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THESIS 2 ============ -->
+<section class="sec">
+  <div class="wrap thesis reveal">
+    <p>Les formations IA partent des outils et espèrent arriver à l'humain. Nous faisons <span class="spec">l'inverse</span>.</p>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="sec alt" id="equipe">
+  <div class="wrap">
+    <div class="sec-head mt-head reveal">
+      <div class="kicker">08 · L'équipe principale du parcours immersif</div>
+      <h2 class="display h-lg">Pour soutenir une transformation entière,<br>à l'intérieur comme à <span class="spec">l'extérieur</span>.</h2>
+    </div>
+    <div class="team">
+      <div class="member reveal">
+        <div class="av">
+          <picture>
+            <source srcset="team/marie-eve-drouin.webp" type="image/webp">
+            <img src="team/marie-eve-drouin.png" alt="Marie-Eve Drouin" width="163" height="163" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Marie-Eve Drouin</h3>
+        <div class="role">CRHA · Médiatrice accréditée<br>Co-fondatrice Neo Carbone · Fondatrice Drouin RH</div>
+        <div class="org">Transformation humaine et adoption terrain</div>
+        <div class="quote">« C'est la première fois que la maîtrise technologique et la transformation humaine sont assemblées dans un même programme au Québec. Sans cela, l'IA reste un outil que personne n'adopte vraiment. »</div>
+      </div>
+      <div class="member reveal">
+        <div class="av">
+          <picture>
+            <source srcset="team/gabriel-beaudoin.webp" type="image/webp">
+            <img src="team/gabriel-beaudoin.webp" alt="Gabriel Beaudoin" width="163" height="163" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Gabriel Beaudoin</h3>
+        <div class="role">Président et fondateur<br>Neo Carbone</div>
+        <div class="org">Exécution produit et construction AI-native</div>
+        <div class="quote">« Vos équipes ne repartent pas avec des notes de cours, elles repartent avec un outil qui est fonctionnel, éprouvé et qui leur fait gagner du temps dès le lundi matin. C'est ça, la différence entre former et transformer. »</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATES / COHORTS ============ -->
+<section class="sec" id="dates">
+  <div class="wrap">
+    <div class="sec-head mt-head reveal">
+      <div class="kicker">09 · Les prochaines cohortes</div>
+      <h2 class="display h-lg">Présentiel. Petit groupe.<br>Accompagnement <span class="spec">serré</span>.</h2>
+    </div>
+    <div class="dates">
+      <div class="cohort reveal">
+        <div class="lab">Cohorte 1</div>
+        <div class="city">Montréal</div>
+        <div class="date">Début le 17 septembre 2026</div>
+        <a class="btn btn-secondary" href="#inscription" data-cohort="montreal-2026-09-17">Réserver votre place <span class="ar">→</span></a>
+      </div>
+      <div class="cohort reveal">
+        <div class="lab">Cohorte 2</div>
+        <div class="city">Lévis</div>
+        <div class="date">Début le 25 septembre 2026</div>
+        <a class="btn btn-secondary" href="#inscription" data-cohort="levis-2026-09-25">Réserver votre place <span class="ar">→</span></a>
+      </div>
+    </div>
+    <div class="internal reveal">
+      <div class="glow a"></div>
+      <div class="internal-txt">
+        <div class="lab">Format exclusif</div>
+        <h3>Réservez une cohorte à l'interne pour votre organisation</h3>
+        <p>Un parcours sur mesure, dates flexibles, uniquement avec vos employés. Idéal pour transformer toute une équipe ensemble.</p>
+      </div>
+      <a class="btn btn-primary" href="#inscription" data-cohort="interne">Réserver pour mon organisation <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head center mt-head reveal">
+      <div class="kicker center" style="justify-content:center">10 · Questions fréquentes</div>
+      <h2 class="display h-lg">Tout ce qu'on nous <span class="spec">demande</span>.</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq">
+        <button aria-expanded="false">Ça prend combien de temps?<span class="pm"></span></button>
+        <div class="ans"><p>Quatre phases, quatre jours, répartis sur six semaines. Assez court pour tenir dans une vraie année de travail, assez étalé pour que la transformation s'installe pour de bon.</p></div>
+      </div>
+      <div class="faq">
+        <button aria-expanded="false">C'est en présentiel ou en ligne?<span class="pm"></span></button>
+        <div class="ans"><p>En présentiel, en cohorte multi-entreprises — maximum de 15 participants par cohorte, pour un accompagnement serré et de vraies opportunités de partage entre organisations.</p></div>
+      </div>
+      <div class="faq">
+        <button aria-expanded="false">En quoi c'est différent d'une formation ChatGPT?<span class="pm"></span></button>
+        <div class="ans"><p>Vous ne repartez pas avec des notes de cours, mais avec un outil IA fonctionnel construit sur vos propres données, et un plan de déploiement sur 90 jours.</p></div>
+      </div>
+      <div class="faq">
+        <button aria-expanded="false">Mon équipe a peur d'être remplacée. Vous gérez ça comment?<span class="pm"></span></button>
+        <div class="ans"><p>Une phase entière est dédiée à l'humain et à la psychologie du changement. Les outils sont co-construits avec les employés plutôt que parachutés d'en haut — ils deviennent les auteurs de la transformation.</p></div>
+      </div>
+      <div class="faq">
+        <button aria-expanded="false">On a déjà payé des formations que personne n'utilise. Pourquoi ce serait différent?<span class="pm"></span></button>
+        <div class="ans"><p>Parce qu'on part de vos irritants réels, pas d'un contenu générique. On construit ce qui sert vraiment, on teste en conditions réelles, et on installe l'adoption.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING INK BLOCK ============ -->
+<section class="sec ink closing">
+  <div class="glow a"></div>
+  <div class="wrap">
+    <div class="closing-in reveal">
+      <h2>Les organisations qui apprendront à <span class="spec">construire</span> avec l'IA<br>prendront une longueur d'avance <span class="it">en continu</span>.</h2>
+      <p class="lede">Neo Carbone porte la technologie. Drouin RH porte les gens. Ensemble, ils portent la transformation.</p>
+      <div class="cta">
+        <a class="btn btn-primary btn-lg" href="#inscription">Réserver ma place <span class="ar">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="#methode">Revoir la méthode <span class="ar">↑</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING FORM ============ -->
+<section class="sec" id="inscription">
+  <div class="wrap">
+    <div class="book">
+      <div class="book-aside reveal">
+        <div class="kicker">11 · Discutons-en</div>
+        <h2 class="display h-lg" style="font-size:clamp(30px,3.6vw,48px)">Parlons de votre prochaine <span class="spec">cohorte</span>.</h2>
+        <p class="lede" style="max-width:440px">Remplissez le formulaire — nous revenons rapidement pour confirmer le tout et répondre à vos questions.</p>
+        <div class="chips">
+          <span>4 phases</span><span>4 jours</span><span>6 semaines</span><span>Cohortes 2026</span>
+        </div>
+      </div>
+      <div class="book-card reveal">
+        <form id="bookForm">
+          <div class="field">
+            <label for="f-name">Prénom et nom *</label>
+            <input id="f-name" name="name" type="text" required placeholder="Jeanne Tremblay">
+          </div>
+          <div class="field">
+            <label for="f-email">Courriel professionnel *</label>
+            <input id="f-email" name="email" type="email" required placeholder="jeanne@organisation.ca">
+          </div>
+          <div class="field">
+            <label for="f-org">Entreprise / organisation *</label>
+            <input id="f-org" name="org" type="text" required placeholder="Nom de l'organisation">
+          </div>
+          <div class="field">
+            <label for="f-cohort">Cohorte souhaitée *</label>
+            <div class="select-wrap">
+              <select id="f-cohort" name="cohort" required>
+                <option value="" disabled selected hidden>Sélectionner…</option>
+                <option value="montreal-2026-09-17">Montréal — 17 septembre 2026</option>
+                <option value="levis-2026-09-25">Lévis — 25 septembre 2026</option>
+                <option value="interne">Format sur mesure — à l'interne</option>
+              </select>
+            </div>
+          </div>
+          <label class="consent"><input type="checkbox" required>J'accepte d'être contacté(e) par l'équipe de Résidence IA au sujet du programme.</label>
+          <button class="btn btn-primary btn-lg" type="submit">Réserver ma place</button>
+        </form>
+        <div class="book-foot">
+          <span>Réponse sous 24 h</span><span>Aucun paiement requis</span><span>Neo Carbone × Drouin RH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-partners" aria-label="Neo Carbone × Drouin RH">
+          <img class="footer-logo footer-logo-neo" src="assets/logo-horizontal-color-white.png" alt="Neo Carbone">
+          <span class="footer-partners-x" aria-hidden="true">×</span>
+          <img class="footer-logo footer-logo-drouin" src="assets/drouin-rh-logo-white.png" alt="Drouin Ressources Humaines">
+        </div>
+        <p>La Résidence IA Québec : une co-création québécoise. Le parcours immersif francophone pour intégrer l'IA en entreprise — sans chaos, sans laisser personne derrière.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Le parcours</h5>
+        <a href="#probleme">Le constat</a>
+        <a href="#parcours">Deux transformations</a>
+        <a href="#methode">Les 4 phases</a>
+        <a href="#resultats">Avant / Après</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Passer à l'action</h5>
+        <a href="#dates">Les cohortes 2026</a>
+        <a href="#inscription">Réserver ma place</a>
+        <a href="mailto:info@neocarbone.ai">info@neocarbone.ai</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Résidence IA Québec · Tous droits réservés</span>
+      <span>Neo Carbone × Drouin RH</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
