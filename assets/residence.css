@@ -709,6 +709,37 @@ body.nav-open{overflow:hidden;}
 .cohort .city{font-family:var(--ff-grotesk);font-weight:800;font-size:28px;letter-spacing:-0.025em;color:var(--ink);}
 .cohort .date{font-size:15px;color:var(--ink-2);margin-bottom:10px;}
 .cohort .btn{margin-top:auto;width:fit-content;}
+/* ---------- pricing ---------- */
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;}
+.price-card{
+  position:relative;overflow:hidden;
+  background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);
+  padding:32px;display:flex;flex-direction:column;gap:6px;
+  box-shadow:var(--shadow-card-soft);transition:transform .2s,box-shadow .2s;
+}
+.price-card::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--blue-200);filter:blur(44px);opacity:.35;pointer-events:none;}
+.price-card>*{position:relative;z-index:1;}
+.price-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-card);}
+.price-card .lab{font-family:var(--ff-mono);font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue-600);margin-bottom:8px;}
+.price-card .amount{
+  font-family:var(--ff-grotesk);font-weight:800;font-size:clamp(34px,3.6vw,44px);
+  letter-spacing:-0.035em;line-height:1;
+  background:var(--accent-gradient);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.price-card .per{font-size:14px;color:var(--ink-2);margin-top:6px;}
+.price-card.featured{border-color:var(--blue-200);box-shadow:0 12px 32px -14px rgba(30,58,138,.28);}
+.price-badge{
+  position:absolute;top:24px;right:24px;
+  font-family:var(--ff-grotesk);font-size:12px;font-weight:700;letter-spacing:0.01em;
+  color:#fff;background:var(--accent-gradient);
+  padding:6px 13px;border-radius:var(--r-pill);
+}
+.pricing-note{
+  text-align:center;margin:18px 0 0;font-size:13.5px;font-weight:600;color:var(--ink-2);
+}
+.pricing-note::before{content:'✓ ';color:var(--blue-600);font-weight:800;}
+
 .internal{
   margin-top:20px;
   background:linear-gradient(135deg, #0c0c0c 0%, #0f172a 40%, #1e3a8a 100%);
@@ -880,7 +911,7 @@ body.nav-open{overflow:hidden;}
   .nav-right{gap:10px;}
   .hero-counts{grid-template-columns:repeat(3,1fr);gap:8px;max-width:320px;margin:0 auto;}
   .hero-counts .val{font-size:clamp(24px,7vw,32px);}
-  .stats,.prob-grid,.team,.dual,.dates{grid-template-columns:1fr;}
+  .stats,.prob-grid,.team,.dual,.dates,.pricing{grid-template-columns:1fr;}
   .ba-compare-head{display:none;}
   .ba-compare-body{gap:40px;}
   .ba-row{
