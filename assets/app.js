@@ -297,6 +297,19 @@
     });
   });
 
+  /* ---------- Back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    var onTopScroll = function(){
+      toTop.classList.toggle('show', window.scrollY > 600);
+    };
+    window.addEventListener('scroll', onTopScroll, {passive:true});
+    onTopScroll();
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
   /* ---------- Before/After cards: magnetic tilt + sheen ---------- */
   (function(){
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
